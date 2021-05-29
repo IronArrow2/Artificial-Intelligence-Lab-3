@@ -5,7 +5,7 @@
 #include "Scene.h"
 #include "StarShip.h"
 #include "Target.h"
-
+#include "Obstacle.h"
 
 class PlayScene : public Scene
 {
@@ -15,7 +15,7 @@ public:
 
 	// Scene LifeCycle Functions
 	virtual void draw() override;
-	void moveStarShip() const;
+	//void moveStarShip() const;
 	virtual void update() override;
 	virtual void clean() override;
 	virtual void handleEvents() override;
@@ -30,6 +30,7 @@ private:
 	// Game Objects
 	Target* m_pTarget;
 	StarShip* m_pStarShip;
+	Obstacle* m_pObstacle;
 
 	// UI Controls
 	bool m_bToggleSeek;
